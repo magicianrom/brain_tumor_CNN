@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ texts.result_title }}</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="content">
+
+        <h1>{{ texts.result_heading }}</h1>
+        <p class="subtitle">{{ texts.result_subtitle }}</p>
+
+        <div class="image-preview">
+            <img src="/uploads/{{ image_file }}" alt="MRI Image" class="mri-image">
+        </div>
+
+        <div class="result-highlight">
+            <h2>{{ pred }}</h2>
+            <p>{{ conf }}% {{ texts.confidence }}</p>
+        </div>
+
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>{{ texts.class_label }}</th>
+                    <th>{{ texts.probability_label }}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for k, v in probs.items() %}
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>{{ v }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="footer-text">{{ texts.model_text }}</p>
+
+        <div class="action-buttons">
+            <a href="/predict" class="btn btn-primary">{{ texts.try_again }}</a>
+            <a href="/menu" class="btn btn-secondary">{{ texts.back_menu }}</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

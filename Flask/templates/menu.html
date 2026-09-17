@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ texts.menu_title }}</title>
+
+    <link rel="stylesheet" href="/static/menu.css">
+    <link rel="icon" type="image/png" href="/static/images/menu.png">
+</head>
+
+<body>
+
+<div class="page">
+    <div class="content">
+
+        <img src="/static/images/menu.png" class="menu-icon-top" alt="Menu">
+
+        <h1>{{ texts.menu_title }}</h1>
+        <p class="subtitle">{{ texts.menu_subtitle }}</p>
+
+        <div class="menu-grid">
+
+            <a href="/predict" class="menu-card primary">
+                <img src="/static/images/scan.png" alt="Predict icon" class="menu-icon">
+                <span>{{ texts.predict }}</span>
+            </a>
+
+            <a href="/language" class="menu-card light full-width">
+                <img src="/static/images/back.png" alt="Back icon" class="menu-icon">
+                <span>{{ texts.back }}</span>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

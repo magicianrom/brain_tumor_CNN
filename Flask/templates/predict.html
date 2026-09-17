@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ texts.predict_title }}</title>
+    <link rel="stylesheet" href="/static/predict.css">
+    <link rel="icon" type="image/png" href="/static/images/scan.png">
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+            <div class="title-row">
+            <img src="/static/images/scan.png" class="title-icon" alt="Scan">
+            <h1>{{ texts.predict_heading }}</h1>
+            </div>
+            <p class="subtitle">{{ texts.predict_subtitle }}</p>
+
+            <div class="disclaimer-box">
+                {{ texts.disclaimer }}
+            </div>
+
+            <form action="/predict" method="POST" enctype="multipart/form-data" class="upload-form">
+
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    class="file-input"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary">
+                    {{ texts.predict_button }}
+                </button>
+
+            </form>
+
+            <a href="/menu" class="btn btn-secondary back-btn">
+                {{ texts.back_menu }}
+            </a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

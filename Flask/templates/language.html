@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Language</title>
+<link rel="stylesheet" href="/static/language.css">
+<link rel="icon" type="image/png" href="/static/images/language.png">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="content">
+
+        <img src="/static/images/language.png" class="language-icon" alt="Language">
+
+        <h1>Select Language</h1>
+        <p class="subtitle">Please choose your preferred language</p>
+
+        <form action="/language" method="POST" class="language-grid">
+
+            <button type="submit" name="language" value="en" class="language-card primary">
+                <img src="/static/images/english.png" class="language-image" alt="English">
+                <span>English</span>
+            </button>
+
+            <button type="submit" name="language" value="ar" class="language-card secondary">
+                <img src="/static/images/arabic.png" class="language-image" alt="Arabic">
+                <span>العربية</span>
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
