@@ -1,6 +1,6 @@
 # brain_tumor_CNN
 
-Develop a model capable of classifying brain tumors using deep learning techniques which 
+Developed a model capable of classifying brain tumors using deep learning techniques which 
 could further assist radiologists in identifying brain tumors, like glioma, meningioma, 
 pituitary and no tumor. In addition, a web-based application was developed to allow users upload MRI images 
 and receive predictions. 
